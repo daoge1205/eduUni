@@ -1,4 +1,4 @@
-<html>
+﻿<html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,7 +8,17 @@
 <script src="bootstrap.min.js"></script>
 
 <title>毕业设计首页</title>
+
+
 <style>
+	*{
+		padding:0;
+		margin:0;
+
+	}
+	a{
+		text-decoration:none;
+	}
 	#d1{
 		background-color:grey;
 		height:50px;
@@ -37,6 +47,13 @@
                 width:25%;
                 text-align:center;
         }
+	 #d231{
+		 background-color:lightblue;
+	 	 opacity:0.8;
+		 position:absolute;						                
+		 width:350px;					
+		 height:200px;	
+		 display:none;																       z-index:999;															    }
 	 #d24{
                 background-color:black;
                 color:white;
@@ -48,18 +65,18 @@
 		width:100%;
 		height:445px;
 		float:left;
+		
 	}
 	.carousel-inner img {
      		 width: 100%;
     		 height: 100%;
   	}
-
-
-
 </style>
+
 </head>
 
 <body>
+	<?php $err=$_POST['errtext'];?>
 	<div id="d1">
 		这是广告栏目
 	</div>
@@ -71,6 +88,18 @@
         </div>
 	 <div id="d23">
                 用户登陆
+		<div id="d231">
+			<form method="post" action="login.php">
+					<h2>登陆界面</h2>
+					帐号: <input type="text" name="username"><br/>
+					密码: <input type="password" name="passwd"><br/><br/>
+					<span style="color:red"><?php echo $err?></span>
+					<div>
+						<input  type="submit" name="submit" value="提交" style="margin-right:20px;">
+						<a href="zhuce.php">注册</a>
+					</div>  
+			</form>
+		</div>
         </div>
 	 <div id="d24">
                 管理者选项
@@ -103,13 +132,26 @@
 			 <a class="carousel-control-next" href="#demo" data-slide="next">
 			   	 <span class="carousel-control-next-icon"></span>
 			 </a>
-
-		</div>
-		
 	</div>
 
 
+<script>
+    /*获取父div和子div*/
+    var father=document.getElementById('d23');
+    var son=document.getElementById('d231');
+    
+    /*鼠标移入父div时，显示子div*/
+    father.onmouseover=function(){
+        son.style.display='block';
+    };
+    
+    /*鼠标移出父div时，显示子div*/    
+    father.onmouseout=function(){
+        son.style.display='none';
+    };  
+</script>
 
 
 </body>
+
 </html>
