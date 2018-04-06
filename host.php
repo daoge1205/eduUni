@@ -81,10 +81,10 @@
 		这是广告栏目
 	</div>
 	<div id="d21">
-		图书查询
+		<a href="bkRec.html" style="color:white;">图书推荐</a>
 	</div>
 	 <div id="d22">
-                好书推荐
+                <a>图书查询</a>
         </div>
 	 <div id="d23">
                 用户登陆
