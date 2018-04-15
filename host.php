@@ -53,7 +53,18 @@
 		 position:absolute;						                
 		 width:350px;					
 		 height:200px;	
-		 display:none;																       z-index:999;															    }
+		 display:none;																      
+		 z-index:999;															    
+	}
+	#d241{
+		background-color:lightblue;
+		opacity:0.8;
+		width:350px;
+		height:200px;
+		z-index:999;
+		display:none;
+		position:absolute;
+	}
 	 #d24{
                 background-color:black;
                 color:white;
@@ -77,6 +88,7 @@
 
 <body>
 	<?php $err=$_POST['errtext'];?>
+	<?php $derr=$_POST['derrtext'];?>
 	<div id="d1">
 		这是广告栏目
 	</div>
@@ -103,6 +115,17 @@
         </div>
 	 <div id="d24">
                 管理者选项
+			<div id="d241">
+			<form method="post" action="domain.php">
+					<h2>管理者登陆</h2>
+					帐号:<input type="text" name="dusername"><br/>
+					密码:<input type="password" name="dpassword"><br/><br/>
+					<span style="color:red"><?php echo $derr?></span>
+					<div>
+						<input type="submit" name"dsubmit" value="提交">
+					</div>		
+			</form>
+			</div>
         </div>
 	<div id="lbq">
 		<div id="demo" class="carousel slide" data-ride="carousel">
@@ -148,7 +171,15 @@
     /*鼠标移出父div时，显示子div*/    
     father.onmouseout=function(){
         son.style.display='none';
-    };  
+    };
+    var dfather=document.getElementById('d24');
+    var dson=document.getElementById('d241');
+    dfather.onmouseover=function(){
+	dson.style.display='block';		
+    }
+   dfather.onmouseout=function(){
+	dson.style.display='none';
+   }
 </script>
 
 
