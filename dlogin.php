@@ -1,5 +1,5 @@
 <?php
-if(!isset($_POST['submit']))
+if(!isset($_POST['dsubmit']))
 	exit('非法访问');
 $user=$_POST['dusername'];
 $pass=$_POST['dpassword'];

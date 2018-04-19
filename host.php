@@ -116,13 +116,13 @@
 	 <div id="d24">
                 管理者选项
 			<div id="d241">
-			<form method="post" action="domain.php">
+			<form method="post" action="dlogin.php">
 					<h2>管理者登陆</h2>
 					帐号:<input type="text" name="dusername"><br/>
 					密码:<input type="password" name="dpassword"><br/><br/>
 					<span style="color:red"><?php echo $derr?></span>
 					<div>
-						<input type="submit" name"dsubmit" value="提交">
+						<input type="submit" name="dsubmit" value="提交">
 					</div>		
 			</form>
 			</div>
