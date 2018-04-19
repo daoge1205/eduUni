@@ -96,7 +96,7 @@
 		<a href="bkRec.html" style="color:white;">图书推荐</a>
 	</div>
 	 <div id="d22">
-                <a>图书查询</a>
+                <a href="bookfind.html"style="color:white;">图书查询</a>
         </div>
 	 <div id="d23">
                 用户登陆
