@@ -8,7 +8,7 @@ $result = $conn->query("select * from account where password='$pass' and usernam
 if($result ->num_rows ==1){	
 	setcookie('username',$user);
 	setcookie('password',$pass);
-	echo "<script>window.location.href='dpage.html';</script>";
+	echo "<script>window.location.href='dpage.php';</script>";
 }
 else{
 	echo '<form name="myform" method="post" action="host.php">';
