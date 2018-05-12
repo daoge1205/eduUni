@@ -21,7 +21,7 @@ if(!isset($max[0])){
 $num=$_POST['number'];
 for($i=0;$i<$num;$i++){
 	$values[$i]=sprintf('%08s',$max[0]+1);
-	$values[$i]=substr_replace($values[$i],$tag,0,2);
+	$values[$i]=substr_replace($values[$i],$tag,0,3);
 	$max[0]++;
 }
 for($j=0;$j<$num;$j++){

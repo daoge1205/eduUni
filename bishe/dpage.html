@@ -45,6 +45,10 @@
 			li:hover{
 				background-color:red;
 			}
+			#table1{
+			  	width:80%;
+				text-align:left;
+			}
 		</style>
 	</head>
 	<body>
@@ -58,9 +62,20 @@
 		<div id="d3">
 			<div class="tab" style="display:block;">
 				<form action="djbook.php" method="post">
-					图书编号:<input type="text" name="bnum"><br/>
-					学生编号:<input type="text" name="snum"><br/>
+					
+					<table id="table1">
+					<tr>	
+					<td>图书编号</td>
+					<td><input type="text" name="bnum"></td>
+					</tr>
+					<tr>
+					<td>学生编号</td>
+					<td><input type="text" name="snum"></td>
+					</tr>
+					<tr><td>
 					<input type="submit" value="提交">
+					</td></tr>
+					</table>
 				</form>
 			</div>
 			<div class="tab">
